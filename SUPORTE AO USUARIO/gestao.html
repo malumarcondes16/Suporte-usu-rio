@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTÃO DE SOLICITAÇÕES</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body onload="listarChamados()">
+    <div class="form-container">
+        <h1>Área administrativa</h1>
+        <a href="cliente/cadastro.html">
+            <button>Cadastro</button>
+        </a>
+        <hr>
+        <h2>Gestão de Chamados</h2>
+        <table id="tabela">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOME</th>
+                    <th>CPF</th>
+                    <th>SETOR</th>
+                    <th>DESCRIÇÃO</th> <!-- Corrigido de DESCRIÇÃO para DESCRIÇÃO -->
+                    <th>STATUS</th>
+                    <th>EDITAR</th>
+                    <th>EXCLUIR</th>
+                </tr>
+            </thead>
+            <tbody id="dados_tabela">
+
+            </tbody>
+        </table>
+        <br>
+    </div>
+
+    <!-- Formulário para enviar solicitação de atendimento técnico (ligação) -->
+    <div class="form-container">
+        <h2>SOLICITAÇÃO DE ATENDIMENTO TÉCNICO</h2>
+        <form id="formulario" onsubmit="alterarDados(event)">
+            <label for="nome">Nome completo:</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite aqui ..." readonly /><br><br>
+            <label for="cpf">Insira o CPF (Somente os números): </label>
+            <input type="text" name="cpf" id="cpf" placeholder="Somente números ..." maxlength="11" /><br><br>
+            <label for="descricao">Descrição:</label> <!-- Corrigido de nome para descricao -->
+            <input type="text" name="descricao" id="descricao" placeholder="Digite aqui ..." readonly /><br><br>
+            <label for="setor">Setor:</label> <!-- Corrigido de nome para setor -->
+            <input type="text" name="setor" id="setor" placeholder="Digite aqui ..." readonly /><br><br>
+            <input type="hidden" id="id"/>
+            <div class="button-container">
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

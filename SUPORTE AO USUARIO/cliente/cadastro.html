@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULÁRIO DE CHAMADO</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>FORMULÁRIO DE CHAMADO</h1>
+        <form id="formulario_chamado" method="post" onsubmit="return cadastrarUsuario(event)">
+            <label for="nome_usuario">Nome do usuário:</label><br>
+            <input type="text" id="nome_usuario" name="nome_usuario" required><br>
+            <label for="cpf">Insira o CPF (Somente os números): </label><br>
+            <input type="text" name="cpf" id="cpf"  pattern="[0-9]{11}" required><br>
+            <label for="descricao_problema">Descrição do problema:</label><br>
+            <input type="text" id="descricao_problema" name="descricao_problema" required><br>
+            <label for="setor">Setor:</label><br>
+            <input type="text" id="setor" name="setor" required><br><br>
+            <div class="button-container">
+            <button type="submit">Enviar Chamado</button>
+        </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
